@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm i
+RUN npm install -g npm@latest && npm cache clean --force
 
 COPY .env.sample .env.local
 
